@@ -1,0 +1,240 @@
+@use "assets" as *;
+
+.banners{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 5rem 1.5rem;
+
+    h3{
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    .banner-1{
+        background-image: url("../assets/home/desktop/pattern-circles.svg");
+        background-position:center top;
+        background-size: 130%;
+        background-repeat: no-repeat;
+        background-color: $c-accent;
+        color: $c-light;
+        display: grid;
+        padding: 5rem 1.5rem;
+        border-radius: 10px;
+        text-align: center;
+
+        img{
+            width: 70%;
+            justify-self: center;
+        }
+
+        .banner-1-texts{
+
+            h3{
+                text-transform: uppercase;
+                font-size: 2rem;
+                padding: 1rem 0;
+            }
+        }
+
+        button{
+            background-color: $c-dark;
+            color: $c-light;
+
+            a{
+                color: $c-light;
+            }
+        }
+
+
+    }
+
+    .banner-2{
+        background-image: url("../assets/home/mobile/image-speaker-zx7.jpg");
+        background-size: cover;
+        background-position: center right;
+        text-transform: uppercase;
+        border-radius: 10px;
+        width: 100%;
+        padding: 8rem 2rem;
+
+
+        button{
+            border: 2px solid $c-dark;
+            background-color: inherit;
+
+            a{
+                color: $c-dark;
+            }
+        }
+
+    }
+
+    .banner-3{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        img{
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .banner-3-texts{
+            text-transform: uppercase;
+            border-radius: 10px;
+            padding: 2rem;
+            background-color: $c-light-gray;
+            width: 100%;
+
+            button{
+                border: 2px solid $c-dark;
+                max-width: 180px;
+
+                a{
+                    color: $c-dark;
+                }
+            }
+        }
+    }
+}
+
+@include mq($tablet){
+    .banners{
+
+        .banner-1{
+            background-position:center top -12rem;
+            background-size: 120%;
+
+    
+            img{
+                width: 30%;
+            }
+    
+            .banner-1-texts{
+                p{
+                    padding: 0 6rem;
+                }
+            }
+    
+        }
+    
+        .banner-2{
+            background-image: url("../assets/home/tablet/image-speaker-zx7.jpg");
+            background-size: cover;
+            background-position: right;
+            text-transform: uppercase;
+            border-radius: 10px;
+            padding: 10rem 6rem;
+    
+        }
+    
+        .banner-3{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+    
+            img{
+                border-radius: 10px;
+                object-fit: cover;
+                aspect-ratio: 1;
+            }
+    
+            .banner-3-texts{
+                display: grid;
+                place-content: center;
+                justify-content: left;
+                text-transform: uppercase;
+                border-radius: 10px;
+                padding: 0 6rem;
+                background-color: $c-light-gray;
+            }
+        }
+    }
+}
+@include mq($pc){ 
+.banners{
+    display: grid;
+    gap: 4rem;
+    padding: 5rem 1rem;
+    @include container();
+
+    h3{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .banner-1{
+        background-size: 60%;
+        background-position: left bottom -300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 8rem;
+        border-radius: 10px;
+        overflow: hidden;
+        padding-top: 10rem;
+        text-align: left;
+
+        img{
+            width: 80%;
+            margin-bottom: -9px;
+        }
+
+        .banner-1-texts{
+            margin-left: 5rem;
+
+            h3{
+                text-transform: uppercase;
+                font-size: 4rem;
+            }
+
+            p{
+                padding: 0;
+            }
+        }
+    }
+
+    .banner-2{
+        background-image: url("../assets/home/desktop/image-speaker-zx7.jpg");
+        background-size: cover;
+        background-position: center right;
+        text-transform: uppercase;
+        border-radius: 10px;
+        padding: 10rem 8rem;
+
+
+        button{
+            border: 2px solid $c-dark;
+            background-color: inherit;
+        }
+
+    }
+
+    .banner-3{
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+
+        img{
+            border-radius: 10px;
+            width: 100%;
+            aspect-ratio: 0;
+        }
+
+        .banner-3-texts{
+            display: grid;
+            place-content: center;
+            justify-content: left;
+            text-transform: uppercase;
+            border-radius: 10px;
+            padding: 0 6rem;
+            background-color: $c-light-gray;
+
+            button{
+                border: 2px solid $c-dark;
+                max-width: 180px;
+            }
+        }
+    }
+}  
+}

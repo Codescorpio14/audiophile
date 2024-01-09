@@ -1,0 +1,79 @@
+@use "assets" as *;
+
+.intro{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding: 8rem 1.5rem;
+    text-align: center;
+
+    .intro-text{
+
+        h1{
+            padding: 2rem 0;
+            text-transform: uppercase;
+
+            span{
+                color: $c-accent;
+            }
+        }
+    }
+
+    img{
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+@include mq($tablet){
+    .intro{
+        padding: 8rem 2rem;
+        text-align: center;
+    
+        .intro-text{
+    
+            h1{
+                font-size: 2rem;
+                padding: 2rem 0;
+                text-transform: uppercase;
+    
+                span{
+                    color: $c-accent;
+                }
+            }
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+@include mq($pc){
+    .intro{
+        padding: 10rem 1rem;
+        display: grid;
+        gap: 10rem;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+        @include container();
+    
+        .intro-text{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+    
+    
+            h1{
+                padding: 2rem 0;
+                font-size: 3rem;
+                text-transform: uppercase;
+    
+                span{
+                    color: $c-accent;
+                }
+            }
+            p{
+                width: 85%;
+            }
+        }
+    }
+}

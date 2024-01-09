@@ -1,0 +1,116 @@
+@use "assets" as *;
+
+footer{
+    background-color: $c-darken;
+    color: $text-gray;
+
+    .footer{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        padding: 2rem;
+        gap: 2rem;
+        text-align: center;
+        
+
+        .footer-left{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .footer-detail{
+                padding: 4rem 0;
+                width: 80%;
+            }
+        }
+
+        .footer-right{
+            
+            .footer-links{
+                list-style: none;
+                text-align: center;
+                padding: 2rem;
+
+                li{
+                    padding: 1rem 0;
+                }
+            }
+            
+            .footer-icons{
+                display: flex;
+                gap: 2rem;
+                justify-content: center;
+            }
+
+        }
+    }
+
+}
+
+@include mq($tablet){
+    footer{
+    
+        .footer{
+            justify-content: left;
+            text-align: left;
+            
+            .footer-left{
+                justify-content: left;
+    
+                .footer-detail{
+                    padding: 4rem 0;
+                    width: 100%;
+                }
+            }
+    
+            .footer-right{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                .footer-links{
+                    display: flex;
+                    gap: 1rem;
+                }
+
+    
+            }
+        }
+    
+    }
+}
+@include mq($pc){
+    footer{
+    
+        .footer{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            padding: 4rem 1rem;
+            @include container();
+    
+            .footer-left{
+                display: grid;
+                justify-content: space-between;
+            }
+    
+            .footer-right{
+                display: grid;
+                justify-content: right;
+                
+                .footer-links{
+                    list-style: none;
+                    padding: 0;
+                }
+                
+                .footer-links, .footer-icons{
+                    display: flex;
+                    justify-content: right;
+                    gap: 2rem;
+                }
+    
+            }
+        }
+    
+    }
+}

@@ -1,0 +1,29 @@
+// Colors
+ 
+$c-light: white;
+$c-dark: black;
+
+$bg-light: #fafafa;
+
+$c-accent: #d87c47;
+$c-light-gray: #f1f1f1;
+$c-darken: #101010;
+
+$text-gray: #676767;
+$text-lightergray: #c6c6c6;
+
+$ff: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+@mixin container{
+    max-width: 1536px;
+    margin: 0 auto;
+}
+
+$tablet:640px;
+$pc:1024px;
+
+@mixin mq($size){
+    @media (min-width: $size) {
+        @content
+    }
+}

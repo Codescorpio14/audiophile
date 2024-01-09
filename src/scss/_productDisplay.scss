@@ -1,0 +1,74 @@
+@use "assets" as *;
+
+.product-display{
+    display: grid;
+    gap: 10rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 15rem;
+
+    .product-box{
+        background-color: $c-light-gray;
+        margin: 2rem;
+        border-radius: 10px;
+        padding: 3rem 2rem 1rem;
+        position: relative;
+
+        .product-box-image{
+            position: absolute;
+            top:-4rem;
+            left: 0;
+            right: 0;
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    a{
+        color:$text-gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        gap: .5rem;
+        border: none;
+    }
+}
+
+@include mq($tablet){
+    .product-display{
+        grid-template-columns: repeat(3,1fr);
+        padding: 2rem;
+        gap: .5rem;
+    
+        .product-box{
+            background-color: $c-light-gray;
+            margin: 0;
+            border-radius: 10px;
+            padding: 2rem 1rem .5rem;
+            position: relative;
+        }
+    
+    }
+}
+@include mq($pc){
+    .product-display{
+        justify-content: space-between;
+        text-align: center;
+        padding-top: 20rem;
+        padding-bottom: 5rem;
+        @include container();
+    
+        .product-box{
+            background-color: $c-light-gray;
+            border-radius: 10px;
+            padding: clamp(8rem,10%,10rem) clamp(6rem,10%,10rem) 4rem;
+    
+            .product-box-image{
+                top:-6rem;
+                width: 60%;
+         
+            }
+        }
+    }
+}

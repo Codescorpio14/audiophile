@@ -1,0 +1,159 @@
+@use "assets" as *;
+
+.products-page{
+    .products-page-title{
+        background-color: $c-darken;
+        color: $c-light;
+        text-align: center;
+        padding: 4rem 0;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+    .product-list{
+        padding: 6rem 1rem;
+        display: grid;
+        gap: 4rem;
+    }
+}
+
+.page-item{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    img{
+        max-width: 450px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .page-item-texts{
+        .new-product{
+            letter-spacing: 2px;
+            color: $c-accent;
+            opacity: .5;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        h1{
+            font-size: 2rem;
+            padding: 1rem 0;
+            text-transform: uppercase;
+        }
+
+        p{
+            margin-bottom: 2rem;
+        }
+
+        .page-btn{
+            background-color: $c-accent;
+            color: $c-light;
+            font-weight: 600;
+            border: none;
+            padding: .75rem 2rem;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+    }
+}
+
+@include mq($tablet){
+    .products-page{
+        .products-page-title{
+            font-size: 3rem;
+        }
+
+    }
+    .page-item{
+    
+        img{
+            max-width: 700px;
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+    
+        .page-item-texts{
+            .new-product{
+                font-size: 1.2rem;
+            }
+    
+            h1{
+                font-size: 2.5rem;
+                padding: 1rem 0;
+            }
+
+            p{
+                padding: 0 5rem;
+            }
+    
+        }
+    }
+
+}
+@include mq($pc){
+    .products-page{
+        
+        .product-list{
+            gap: 6rem;
+            @include container()
+        }
+
+    }
+
+    .page-item{
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        gap: 10rem;
+
+        &:nth-child(2){
+            flex-direction: row-reverse;
+        }
+    
+        img{
+            max-width: 750px;
+            width: 80%;
+            height: 80%;
+        }
+    
+        .page-item-texts{
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+
+
+            .new-product{
+                letter-spacing: 2px;
+                color: $c-accent;
+                opacity: .5;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+    
+            h1{
+                font-size: 2rem;
+                padding: 1rem 0;
+                text-transform: uppercase;
+            }
+
+            p{
+                padding: 0;
+                width: 70%;
+            }
+
+            .page-btn{
+                text-align: center;
+                width: 180px;
+            }
+    
+        }
+    }
+
+}
