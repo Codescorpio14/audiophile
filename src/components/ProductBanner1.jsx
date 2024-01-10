@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import zx9 from "../assets/home/desktop/image-speaker-zx9.png";
+import zx9 from "/assets/home/desktop/image-speaker-zx9.png";
 
 function ProductBanner1() {
   return (

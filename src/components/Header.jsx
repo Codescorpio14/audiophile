@@ -1,6 +1,6 @@
-import logo from "../assets/shared/desktop/logo.svg";
-import cart from "../assets/shared/desktop/icon-cart.svg";
-import hamburger from "../assets/shared/tablet/icon-hamburger.svg";
+import logo from "/assets/shared/desktop/logo.svg";
+import cart from "/assets/shared/desktop/icon-cart.svg";
+import hamburger from "/assets/shared/tablet/icon-hamburger.svg";
 import { NavLink } from "react-router-dom";
 import MiniCart from "./MiniCart";
 import MiniNav from "./MiniNav";

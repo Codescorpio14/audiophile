@@ -1,4 +1,4 @@
-import img from "../assets/shared/desktop/image-best-gear.jpg";
+import img from "/assets/shared/desktop/image-best-gear.jpg";
 
 function Intro() {
   return (

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import yx1 from "../assets/home/desktop/image-earphones-yx1.jpg";
+import yx1 from "/assets/home/desktop/image-earphones-yx1.jpg";
 
 function ProductBanner3() {
   return (
