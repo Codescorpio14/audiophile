@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { emptyCart } from "../redux/features/cartSlice";
 import { toggleCart } from "../redux/features/togglesSlice";
 import data from "../assets/data.json";
-import CartItems from "./cartItems";
+import CartItems from "./CartItems";
 
 function MiniCart() {
   const { cart, total, count } = useSelector((state) => state.cart);

@@ -2,7 +2,6 @@ import { Link, useParams } from "react-router-dom";
 import data from "../assets/data.json";
 import ProdcutDisplay from "../components/ProductDisplay";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 import {
   addQuantity,
   addToCart,
