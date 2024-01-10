@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import data from "../assets/data.json";
-import CartItems from "./cartItems";
+import CartItems from "./CartItems";
 import { formValidation } from "../redux/features/checkoutSlice";
 
 function SummeryBox() {
