@@ -2,7 +2,7 @@ import ProductBanner1 from "../components/ProductBanner1";
 import ProductBanner2 from "../components/ProductBanner2";
 import ProductBanner3 from "../components/ProductBanner3";
 import ProductDisplay from "../components/ProductDisplay";
-import Hero from "../components/hero";
+import Hero from "../components/Hero";
 
 function Home() {
   return (
