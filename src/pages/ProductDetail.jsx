@@ -27,7 +27,7 @@ function ProductDetail() {
           </div>
           <div className="flex-wrapper">
             <img
-              src={"./src/" + product.image.desktop}
+              src={product.image.desktop}
               alt={product.name}
               className="product-image"
             />
@@ -78,17 +78,17 @@ function ProductDetail() {
           <article className="featured-images">
             <img
               className="img1"
-              src={"./src/" + product.gallery.first.desktop}
+              src={product.gallery.first.desktop}
               alt="image 1"
             />
             <img
               className="img2"
-              src={"./src/" + product.gallery.second.desktop}
+              src={product.gallery.second.desktop}
               alt="image 2"
             />
             <img
               className="img3"
-              src={"./src/" + product.gallery.third.desktop}
+              src={product.gallery.third.desktop}
               alt="image 3"
             />
           </article>
@@ -97,7 +97,7 @@ function ProductDetail() {
             <div className="suggested-products">
               {product.others.map((other) => (
                 <div className="suggested-product" key={other.name}>
-                  <img src={"./src/" + other.image.desktop} alt={other.slug} />
+                  <img src={other.image.desktop} alt={other.slug} />
                   <h2>{other.name}</h2>
                   <button>
                     <Link to={"../" + other.slug}>see product</Link>

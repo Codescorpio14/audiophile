@@ -14,7 +14,7 @@ function CartItems({ image, name, price, id, slug }) {
 
   return (
     <div className="cart-item">
-      <img src={"./src/" + image.mobile} alt={slug} />
+      <img src={image.mobile} alt={slug} />
       <div className="cart-item-texts">
         <p className="cart-item-name">{name}</p>
         <p>$ {price}</p>
